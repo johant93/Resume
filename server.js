@@ -6,7 +6,7 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.use('/css',express.static(__dirname +'/css'));
+app.use('/public',express.static(__dirname +'/public'));
 //app.use('/js',express.static(__dirname +'/js'));
 
 app.listen(process.env.PORT || 4000, function(){
