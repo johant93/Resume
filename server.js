@@ -1,12 +1,11 @@
-var express = require('express')
-var app = express();
-
-var port = process.env.PORT || 8080;
+const express = require('express');
+const app = express();
+const path = require('path');
 
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(port, function() {
-	console.log('app running');
+app.listen(process.env.PORT || 4000, function(){
+    console.log('Your node js server is running');
 });
